@@ -26,15 +26,15 @@ struct StationaryDimmingConfig{
 	// if the display should be dimmed when the headset is stationary
 	bool enable = true;
 	// the angle that the headset has to rotate for it to be considered as moved
-	double movementThreshold = 0.4;
+	double movementThreshold = 0.3;
 	// the time in seconds that the headset has to be stationary for it to be dimmed
-	double movementTime = 15.0;
+	double movementTime = 50.0;
 	// the amount to dim the display to when stationary
-	double dimBrightnessPercent = 2;
+	double dimBrightnessPercent = 0;
 	// the amount per second to dim the display when stationary
 	double dimSeconds = 10;
 	// the amount per second to brighten the display when moving
-	double brightenSeconds = 5;
+	double brightenSeconds = 2;
 };
 
 
@@ -92,7 +92,7 @@ public:
 		// ipd offset from the ipd value in mm
 		double ipdOffset = 0.0;
 		// minimum black levels from 0 to 1
-		double blackLevel = 0;
+		double blackLevel = 0.016;
 		// tint the display this color
 		Color colorMultiplier = {};
 		// distortion profile to use
